@@ -1,0 +1,278 @@
+<script>
+		var talukasArray = new Array();
+		<?php foreach($tehsils as $tehsil) { ?>
+			talukasArray[<?php echo $tehsil["semisCodesDistrictTehsil"]["tehsil_id"]; ?>] = new Array();
+			talukasArray[<?php echo $tehsil["semisCodesDistrictTehsil"]["tehsil_id"]; ?>]["district"] = "<?php echo $tehsil["semisCodesDistrictTehsil"]["district"]; ?>";
+			talukasArray[<?php echo $tehsil["semisCodesDistrictTehsil"]["tehsil_id"]; ?>]["tehsil"] = "<?php echo $tehsil["semisCodesDistrictTehsil"]["tehsil"]; ?>";
+		<?php } ?>
+</script>
+
+<?php 
+	echo $this->Html->css('demo_page');
+	echo $this->Html->css('demo_table');
+?>
+
+<!--script type="text/javascript" src="<?php //echo $this->webroot?>js/jquery.js"></script-->
+<script type="text/javascript" src="<?php echo $this->webroot; ?>js/jquery.dataTables.js"></script>
+
+
+
+	
+
+<script type="text/javascript" charset="utf-8">
+			
+			
+			function update_tehsils(district)
+			{
+				var aData 
+				var aData = new Array();
+				if(district == "")
+				{	
+					var r='<option value=""></option>';
+					for ( x in talukasArray)
+					{
+						r += '<option value="'+talukasArray[x]["tehsil"]+'">'+talukasArray[x]["tehsil"]+'</option>';
+					}
+				}else
+				{
+					var r='<option value=""></option>';
+					for ( x in talukasArray)
+					{
+						if(talukasArray[x]["district"] == district)
+						{
+							r += '<option value="'+talukasArray[x]["tehsil"]+'">'+talukasArray[x]["tehsil"]+'</option>';
+						}
+					}
+				}
+				
+				$("#sel5").html(r);
+			}
+			
+			function update_ucs(taluka, level)
+			{
+				if(taluka == "")
+				{
+					taluka = 0;
+				}
+				$.ajax({
+						url: '<?php echo $this->webroot?>home/update_uc_name_select/tehsilName/'+level+'/'+taluka,
+						type: "GET",
+						cache: false,
+						success: function (html) {
+						$("#sel6").html(html);
+						},
+						error: function(xhr, ajaxOptions, thrownError){
+						}
+					});
+			}
+			
+			function fnCreateSelect( aData , a)
+			{
+				if(!(a == 4))
+				{
+					var r='<select id="sel'+a+'"><option value=""></option>', i, iLen=aData.length;
+				}else
+				{
+					var r='<select id="sel'+a+'">', i, iLen=aData.length;
+				}
+				
+				for ( i=0 ; i<iLen ; i++ )
+				{
+					r += '<option value="'+aData[i]+'">'+aData[i]+'</option>';
+				}
+				if(!(a == 4))
+				{
+					return r+'</select>';
+				}else
+				{
+					return r+'<option value="">All</option></select>';
+				}
+			}
+			
+			var asInitVals = new Array();
+			
+			
+			$(document).ready(function() {
+				$("#sel4").change(function() {
+					var value = $("#sel4").val();
+					alert(value);
+				});
+				
+				/* Initialise the DataTable */
+				var oTable = $('#example').dataTable( {
+					"oLanguage": {
+						"sSearch": "Search all columns:"
+					},	
+					"bProcessing": true,
+					"sAjaxSource": '<?php echo $this->webroot; ?>/files/arrays.txt',
+				} );
+				
+
+				$("tfoot input").keyup( function () {
+				/* Filter on the column (the index) of this element */
+				oTable.fnFilter( this.value, 1 );
+				} );
+					
+				/*
+				 * Support functions to provide a little bit of 'user friendlyness' to the textboxes in 
+				 * the footer
+				 */
+				$("tfoot input").each( function (i) {
+					
+					asInitVals[i] = this.value;
+					
+				} );
+				
+				$("tfoot input").focus( function () {
+					if ( this.className == "search_init" )
+					{
+						this.className = "";
+						this.value = "";
+					}
+				} );
+				
+				$("tfoot input").blur( function (i) {
+					if ( this.value == "" )
+					{
+						this.className = "search_init";
+						this.value = asInitVals[$("tfoot input").index(this)];
+					}
+				} );
+			} );
+			
+			function populatte_select()
+			{
+				(function($) {
+			/*
+			 * Function: fnGetColumnData
+			 * Purpose:  Return an array of table values from a particular column.
+			 * Returns:  array string: 1d data array 
+			 * Inputs:   object:oSettings - dataTable settings object. This is always the last argument past to the function
+			 *           int:iColumn - the id of the column to extract the data from
+			 *           bool:bUnique - optional - if set to false duplicated values are not filtered out
+			 *           bool:bFiltered - optional - if set to false all the table data is used (not only the filtered)
+			 *           bool:bIgnoreEmpty - optional - if set to false empty values are not filtered from the result array
+			 * Author:   Benedikt Forchhammer <b.forchhammer /AT\ mind2.de>
+			 */
+			$.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {
+				// check that we have a column id
+				if ( typeof iColumn == "undefined" ) return new Array();
+				
+				// by default we only wany unique data
+				if ( typeof bUnique == "undefined" ) bUnique = true;
+				
+				// by default we do want to only look at filtered data
+				if ( typeof bFiltered == "undefined" ) bFiltered = true;
+				
+				// by default we do not wany to include empty values
+				if ( typeof bIgnoreEmpty == "undefined" ) bIgnoreEmpty = true;
+				
+				// list of rows which we're going to loop through
+				var aiRows;
+				
+				// use only filtered rows
+				if (bFiltered == true) aiRows = oSettings.aiDisplay; 
+				// use all rows
+				else aiRows = oSettings.aiDisplayMaster; // all row numbers
+			
+				// set up data array	
+				var asResultData = new Array();
+				
+				for (var i=0,c=aiRows.length; i<c; i++) {
+					iRow = aiRows[i];
+					var aData = this.fnGetData(iRow);
+					var sValue = aData[iColumn];
+					
+					// ignore empty values?
+					if (bIgnoreEmpty == true && sValue.length == 0) continue;
+			
+					// ignore unique values?
+					else if (bUnique == true && jQuery.inArray(sValue, asResultData) > -1) continue;
+					
+					// else push the value onto the result data array
+					else asResultData.push(sValue);
+				}
+				
+				return asResultData;
+			}}(jQuery));
+				
+				var oTable = $('#example').dataTable( {
+					"oLanguage": {
+						"sSearch": "Search all columns:"
+					}
+				} );
+				
+				$("tfoot th").each( function ( i ) {
+						if(!(i == 1))
+						{
+							
+							this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i), i );
+							
+							if(i == 4)
+							{
+								oTable.fnFilter( "Badin", 4 );
+							}
+						// if(this.innerHTML == '<select><option value=""></option></select>')
+						// {
+							// this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i) );
+						// }
+						
+						$('select', this).change( function () {
+							if(i == 4)
+							{
+								oTable.fnFilter( "", 5 );
+								oTable.fnFilter( "", 6 );
+								
+								update_tehsils($(this).val());
+								update_ucs($(this).val(), 1);
+							}
+							if(i == 5)
+							{
+								oTable.fnFilter( "", 6 );
+								if($(this).val() == "")
+								{
+									update_ucs($("#sel5").val(), 1);
+								}else
+								{
+									update_ucs($(this).val(), 2);
+								}
+							}
+							
+							oTable.fnFilter( $.trim($(this).val()), i );
+							
+						} );
+						}
+					} );
+					
+			}
+		</script>			
+
+<a href="javascript:populatte_select();" >Populate Select</a>		
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+	<thead>
+		<tr>
+			<th>Prefix</th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Level</th>
+			<th>District</th>
+			<th>Taluka</th>
+			<th>UC</th>
+			<th width="15%">View Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+	<tfoot>
+		<tr>
+			<th></th>
+			<th><input type="text" name="search_browser" value="Search browsers" class="search_init" /></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</tfoot>
+</table>

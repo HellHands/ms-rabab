@@ -1,0 +1,413 @@
+<div class="asc201516s index">
+	<h2><?php echo __('Asc201516s');?></h2>
+	<table cellpadding="0" cellspacing="0">
+	<tr>
+			<th><?php echo $this->Paginator->sort('id');?></th>
+			<th><?php echo $this->Paginator->sort('school_semis_new');?></th>
+			<th><?php echo $this->Paginator->sort('coord_long');?></th>
+			<th><?php echo $this->Paginator->sort('coord_lat');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_district');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_taluka');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_uc');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_tappa');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_deh');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_village_mohallah');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_name');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_address');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_phone_number');?></th>
+			<th><?php echo $this->Paginator->sort('hti_name');?></th>
+			<th><?php echo $this->Paginator->sort('hti_cnic');?></th>
+			<th><?php echo $this->Paginator->sort('hti_designation');?></th>
+			<th><?php echo $this->Paginator->sort('hti_designation_specify');?></th>
+			<th><?php echo $this->Paginator->sort('hti_gender');?></th>
+			<th><?php echo $this->Paginator->sort('hti_number');?></th>
+			<th><?php echo $this->Paginator->sort('hti_email');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_status_condition');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_status');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_closure_date');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_closure_reason');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_closure_reason_specify');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_location');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_level');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_sch_sne');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_sne_available_number');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_sch_admin');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_sch_gender');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_sch_medium');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_enrollment_urdu');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_enrollment_sindhi');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_enrollment_english');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_shift');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_branch_school');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_main_school_semis_code');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_main_school_name');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_ownership');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_other_school_building_semis');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_other_building_specify');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_no_building_sch_placed');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_year_construction');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_construction_type');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_condition');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_total_rooms');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_class_rooms');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_other_then_learning');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_purpose_other_then_teaching');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_purpose_other_then_teaching_specify');?></th>
+			<th><?php echo $this->Paginator->sort('sbf_condition_bwall');?></th>
+			<th><?php echo $this->Paginator->sort('sbf_toilets');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_toilets_number_func');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_toilets_number_nfunc');?></th>
+			<th><?php echo $this->Paginator->sort('sbf_water_available');?></th>
+			<th><?php echo $this->Paginator->sort('sbf_water_available_source');?></th>
+			<th><?php echo $this->Paginator->sort('sbf_electricity_source');?></th>
+			<th><?php echo $this->Paginator->sort('sti_govt_teacher_number_male');?></th>
+			<th><?php echo $this->Paginator->sort('sti_non_govt_teacher_number_male');?></th>
+			<th><?php echo $this->Paginator->sort('sti_govt_teacher_number_female');?></th>
+			<th><?php echo $this->Paginator->sort('sti_non_govt_teacher_number_female');?></th>
+			<th><?php echo $this->Paginator->sort('sti_teacher_mf_total');?></th>
+			<th><?php echo $this->Paginator->sort('sti_govt_non_teaching_number_male');?></th>
+			<th><?php echo $this->Paginator->sort('sti_govt_non_teaching_number_female');?></th>
+			<th><?php echo $this->Paginator->sort('sti_govt_non_teaching_mf_total');?></th>
+			<th><?php echo $this->Paginator->sort('ht_signature_page_1');?></th>
+			<th><?php echo $this->Paginator->sort('stuenr_source');?></th>
+			<th><?php echo $this->Paginator->sort('stuenr_source_specify');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_is_sch_consolidated');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_consolidated_merged_number');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch1_semis_code');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch1_name');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch1_type');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch1_distance');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch2_semis_code');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch2_name');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch2_type');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch2_distance');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch3_semis_code');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch3_name');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch3_type');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch3_distance');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch4_semis_code');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch4_name');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch4_type');?></th>
+			<th><?php echo $this->Paginator->sort('asi_sch4_distance');?></th>
+			<th><?php echo $this->Paginator->sort('asi_total_pprs_schools');?></th>
+			<th><?php echo $this->Paginator->sort('asi_total_private_schools');?></th>
+			<th><?php echo $this->Paginator->sort('asi_grand_total_gp_schools');?></th>
+			<th><?php echo $this->Paginator->sort('corner1_coord_long');?></th>
+			<th><?php echo $this->Paginator->sort('corner1_coord_lat');?></th>
+			<th><?php echo $this->Paginator->sort('corner2_coord_long');?></th>
+			<th><?php echo $this->Paginator->sort('corner2_coord_lat');?></th>
+			<th><?php echo $this->Paginator->sort('corner3_coord_long');?></th>
+			<th><?php echo $this->Paginator->sort('corner3_coord_lat');?></th>
+			<th><?php echo $this->Paginator->sort('corner4_coord_long');?></th>
+			<th><?php echo $this->Paginator->sort('corner4_coord_lat');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_area_covered');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_semis_dislayed');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_received_tb_13_14');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_const_work_12_13');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_received_stipend_12_13');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_enrolment_stipend_12_13_number');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_eligible_stipend_12_13_number');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_received_stipend_12_13_number');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_is_school_upgraded');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_upgraded_level');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_is_school_adopted');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_adopted_adopter');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_school_ddo_code');?></th>
+			<th><?php echo $this->Paginator->sort('smci_is_functional');?></th>
+			<th><?php echo $this->Paginator->sort('smci_received_smc');?></th>
+			<th><?php echo $this->Paginator->sort('smci_ac_title');?></th>
+			<th><?php echo $this->Paginator->sort('smci_ac_number');?></th>
+			<th><?php echo $this->Paginator->sort('smci_bank_name');?></th>
+			<th><?php echo $this->Paginator->sort('smci_bank_branch_name');?></th>
+			<th><?php echo $this->Paginator->sort('smci_bank_branch_code');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_blackboard_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_blackboard_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_chairs_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_chairs_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_desks_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_desks_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_teacher_chairs_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_teacher_chairs_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_teacher_tables_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_teacher_tables_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_electric_fans_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_electric_fans_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_almirah_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_almirah_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_computers_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_computers_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_water_pump_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_water_pump_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_charts_working');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_stu_charts_repairable');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_comp_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_scie_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_physics_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_chem_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_biology_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_home_economics_lab');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_library');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_play_ground');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_medical_firstaid');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_sports_equip');?></th>
+			<th><?php echo $this->Paginator->sort('ht_signature_page_2');?></th>
+			<th><?php echo $this->Paginator->sort('name_changed');?></th>
+			<th><?php echo $this->Paginator->sort('non_viable');?></th>
+			<th><?php echo $this->Paginator->sort('remarks');?></th>
+			<th><?php echo $this->Paginator->sort('medium_id');?></th>
+			<th><?php echo $this->Paginator->sort('quarter');?></th>
+			<th><?php echo $this->Paginator->sort('year');?></th>
+			<th><?php echo $this->Paginator->sort('final');?></th>
+			<th><?php echo $this->Paginator->sort('created');?></th>
+			<th><?php echo $this->Paginator->sort('modified');?></th>
+			<th><?php echo $this->Paginator->sort('teachers_list_added');?></th>
+			<th><?php echo $this->Paginator->sort('ipaddress');?></th>
+			<th><?php echo $this->Paginator->sort('entered_by');?></th>
+			<th><?php echo $this->Paginator->sort('operator_id');?></th>
+			<th><?php echo $this->Paginator->sort('at_schools_2010');?></th>
+			<th><?php echo $this->Paginator->sort('datetime');?></th>
+			<th><?php echo $this->Paginator->sort('sgi_sch_time_table_available');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_form_filling_source_other');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_form_filling_source');?></th>
+			<th><?php echo $this->Paginator->sort('sfaci_internet_available');?></th>
+			<th><?php echo $this->Paginator->sort('smci_last_meeting_date');?></th>
+			<th><?php echo $this->Paginator->sort('smci_total_meetings_quarter');?></th>
+			<th><?php echo $this->Paginator->sort('smci_balance_current');?></th>
+			<th><?php echo $this->Paginator->sort('smci_balance_september');?></th>
+			<th><?php echo $this->Paginator->sort('smci_chairman_gender');?></th>
+			<th><?php echo $this->Paginator->sort('smci_chairman_contact_number');?></th>
+			<th><?php echo $this->Paginator->sort('smci_chairman_name');?></th>
+			<th><?php echo $this->Paginator->sort('smci_chairman_cnic');?></th>
+			<th><?php echo $this->Paginator->sort('asi_total_govt_schools');?></th>
+			<th><?php echo $this->Paginator->sort('prefix');?></th>
+			<th><?php echo $this->Paginator->sort('school_semis_old');?></th>
+			<th><?php echo $this->Paginator->sort('campus_school');?></th>
+			<th><?php echo $this->Paginator->sort('clusterid');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_na');?></th>
+			<th><?php echo $this->Paginator->sort('bi_school_ps');?></th>
+			<th><?php echo $this->Paginator->sort('sti_teacher_total_vacant');?></th>
+			<th><?php echo $this->Paginator->sort('sti_teacher_total_sne');?></th>
+			<th><?php echo $this->Paginator->sort('sbi_school_building_total_rooms_other_purpose');?></th>
+			<th><?php echo $this->Paginator->sort('dsi_year_establishment');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
+	</tr>
+	<?php
+	$i = 0;
+	foreach ($asc201516s as $asc201516): ?>
+	<tr>
+		<td><?php echo h($asc201516['Asc201516']['id']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['school_semis_new']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['coord_long']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['coord_lat']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_district']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_taluka']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_uc']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_tappa']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_deh']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_village_mohallah']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_address']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_phone_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_cnic']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_designation']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_designation_specify']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_gender']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['hti_email']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_status_condition']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_status']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_closure_date']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_closure_reason']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_closure_reason_specify']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_location']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_level']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_sch_sne']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_sne_available_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_sch_admin']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_sch_gender']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_sch_medium']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_enrollment_urdu']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_enrollment_sindhi']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_enrollment_english']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_shift']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_branch_school']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_main_school_semis_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_main_school_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_ownership']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_other_school_building_semis']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_other_building_specify']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_no_building_sch_placed']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_year_construction']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_construction_type']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_condition']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_total_rooms']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_class_rooms']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_other_then_learning']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_purpose_other_then_teaching']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_purpose_other_then_teaching_specify']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbf_condition_bwall']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbf_toilets']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_toilets_number_func']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_toilets_number_nfunc']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbf_water_available']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbf_water_available_source']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbf_electricity_source']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_govt_teacher_number_male']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_non_govt_teacher_number_male']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_govt_teacher_number_female']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_non_govt_teacher_number_female']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_teacher_mf_total']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_govt_non_teaching_number_male']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_govt_non_teaching_number_female']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_govt_non_teaching_mf_total']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['ht_signature_page_1']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['stuenr_source']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['stuenr_source_specify']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_is_sch_consolidated']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_consolidated_merged_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch1_semis_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch1_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch1_type']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch1_distance']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch2_semis_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch2_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch2_type']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch2_distance']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch3_semis_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch3_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch3_type']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch3_distance']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch4_semis_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch4_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch4_type']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_sch4_distance']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_total_pprs_schools']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_total_private_schools']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_grand_total_gp_schools']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner1_coord_long']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner1_coord_lat']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner2_coord_long']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner2_coord_lat']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner3_coord_long']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner3_coord_lat']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner4_coord_long']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['corner4_coord_lat']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_area_covered']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_semis_dislayed']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_received_tb_13_14']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_const_work_12_13']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_received_stipend_12_13']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_enrolment_stipend_12_13_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_eligible_stipend_12_13_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_received_stipend_12_13_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_is_school_upgraded']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_upgraded_level']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_is_school_adopted']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_adopted_adopter']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_school_ddo_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_is_functional']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_received_smc']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_ac_title']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_ac_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_bank_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_bank_branch_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_bank_branch_code']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_blackboard_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_blackboard_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_chairs_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_chairs_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_desks_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_desks_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_teacher_chairs_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_teacher_chairs_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_teacher_tables_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_teacher_tables_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_electric_fans_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_electric_fans_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_almirah_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_almirah_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_computers_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_computers_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_water_pump_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_water_pump_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_charts_working']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_stu_charts_repairable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_comp_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_scie_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_physics_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_chem_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_biology_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_home_economics_lab']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_library']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_play_ground']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_medical_firstaid']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_sports_equip']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['ht_signature_page_2']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['name_changed']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['non_viable']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['remarks']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['medium_id']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['quarter']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['year']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['final']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['created']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['teachers_list_added']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['ipaddress']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['entered_by']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['operator_id']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['at_schools_2010']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['datetime']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sgi_sch_time_table_available']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_form_filling_source_other']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_form_filling_source']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sfaci_internet_available']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_last_meeting_date']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_total_meetings_quarter']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_balance_current']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_balance_september']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_chairman_gender']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_chairman_contact_number']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_chairman_name']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['smci_chairman_cnic']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['asi_total_govt_schools']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['prefix']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['school_semis_old']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['campus_school']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['clusterid']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_na']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['bi_school_ps']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_teacher_total_vacant']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sti_teacher_total_sne']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['sbi_school_building_total_rooms_other_purpose']); ?>&nbsp;</td>
+		<td><?php echo h($asc201516['Asc201516']['dsi_year_establishment']); ?>&nbsp;</td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $asc201516['Asc201516']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $asc201516['Asc201516']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $asc201516['Asc201516']['id']), null, __('Are you sure you want to delete # %s?', $asc201516['Asc201516']['id'])); ?>
+		</td>
+	</tr>
+<?php endforeach; ?>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	));
+	?>	</p>
+
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('New Asc201516'), array('action' => 'add')); ?></li>
+	</ul>
+</div>

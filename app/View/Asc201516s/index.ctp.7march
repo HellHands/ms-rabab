@@ -1,0 +1,300 @@
+<?php $msg = $this->Session->flash(); 
+if($msg){ ?>
+<div class="row">
+	<div class="col-md-6">
+		<div class="alert alert-warning alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  <?= $msg; ?>
+		</div>	
+	</div>
+</div>
+
+<?php }?>
+
+<br><br><br><br>
+<center><p class="lead">Welcome <strong><?= $this->Session->read('Auth.User.name'); ?></strong> to Data Input Operator (DIO) Dashboard!</p></center>
+<!--<h3>< ?= $this->Html->link(__('Edit'), array('action' => 'add_asc201516', $'add_asc201516') ?></h3> -->
+<!--<h3>< ?php echo $this->Html->link(__('New School'), array('action' => 'add')); ?> </h3>-->
+<p>All schools belonging to Tehsil ID: <?= $utehsil; ?> </p>
+<?php $total_forms = count($semis_universal201415s); ?>
+<p class="lead"><?= $schools_filled_count; ?> form(s) filled out of total <?= $total_forms; ?> forms. </p>
+<?php $percentage = ($schools_filled_count/$total_forms)*100;
+$percentage = round($percentage); ?>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="<?= $percentage; ?>" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <?= $percentage.'%';?>">
+    <?= $percentage . '%'; ?>
+  </div>
+</div>
+<!--< ?=// debug(json_encode($semis_universal201415s, JSON_PRETTY_PRINT)); ?> -->
+
+
+
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#unfilled" aria-controls="unfilled" role="tab" data-toggle="tab">Unfilled Forms</a></li>
+    <li role="presentation"><a href="#filled" aria-controls="filled" role="tab" data-toggle="tab">Filled Forms</a></li>    
+    <li role="presentation"><a href="#finalized" aria-controls="finalized" role="tab" data-toggle="tab">Finalized Forms</a></li>    
+  </ul>
+<!--< ?= debug($forms_statuses); ?>-->
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="unfilled">
+    	<br><br>
+    	<table class="table table-bordered display" id="example" cellpadding="0" cellspacing="0">
+			<thead>
+		        <tr>
+		            <th>School SEMIS Code</th>            
+		            <th>Taluka</th>
+		            <th>School Name</th>
+		            <th>School Address</th>
+		            <th>Actions</th>            
+		        </tr>
+		    </thead>
+		    <tbody>    	
+				<?php 
+				$i = 0;
+				foreach ($schools_not_filled as $key => $value) {?>
+					<tr>	
+					<td style="vertical-align: middle;"><?php echo h($value['s1']['school_semis_new']); ?>&nbsp;</td>				
+					<td style="vertical-align: middle;"><?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+					<td style="vertical-align: middle;"><?php echo h($value['s1']['bi_school_name']); ?>&nbsp;</td>
+					<td style="vertical-align: middle;"><?php echo h($value['s1']['bi_school_address']); ?>&nbsp;</td>
+					<td class="actions">
+						
+						<?php echo $this->Html->link(__('New Entry'), array('action' => 'add', $value['s1']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?> 									
+					</td>
+					</tr>
+					<?php
+					//debug($value);
+				}	?>			
+								<!--<tr>
+									<td style="vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['school_semis_new']); ?>&nbsp;</td>				
+									<td style="vertical-align: middle;">< ?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+									<td style="vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['bi_school_name']); ?>&nbsp;</td>
+									<td style="vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['bi_school_address']); ?>&nbsp;</td>
+									<td class="actions">
+										
+										< ?php echo $this->Html->link(__('New Entry'), array('action' => 'add', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?> 
+
+									</td>
+								</tr>!-->
+		
+	
+				
+
+				
+		    </tbody>
+		</table>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="filled">
+    	<br><br>
+    	<table class="table table-bordered display" id="example2" cellpadding="0" cellspacing="0">
+			<thead>
+		        <tr>
+		            <th id="semisth">School SEMIS Code</th>            
+		            <th>Taluka</th>
+		            <th>School Name</th>
+		            <th>School Address</th>
+		            <th>Actions</th>            
+		        </tr>
+		    </thead>
+		    <tbody>    	
+				<?php 
+				foreach ($schools_filled_n_notfinalized as $key => $value) { ?>
+					<tr>	
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['school_semis_code']); ?>&nbsp;</td>				
+						<td style="vertical-align: middle;"><?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['bi_school_name']); ?>&nbsp;</td>
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['bi_school_address']); ?>&nbsp;</td>
+						<td class="actions">
+																	
+							<a style="margin-top: 0;" class="btn btn-primary" href="asc201516s/edit_asc201516/<?= $value['Asc201516']['school_semis_code'];?>">
+								<span class="glyphicon glyphicon-edit"> </span> &nbsp;&nbsp;Edit
+							</a>
+					
+							<?= $this->Html->link(__('Finalize'), array('action' => 'finalize_dio', $value['Asc201516']['school_semis_code']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?>
+
+						</td>
+					</tr><?php
+				}
+				/*foreach ($semis_universal201415s as $asc201516){
+					if(null != $forms_statuses){
+						foreach ($forms_statuses as $key => $value){
+							if($asc201516['semis_universal201415s']['school_semis_new'] == $value){ ?>
+								<tr>	
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['school_semis_new']); ?>&nbsp;</td>				
+									<td style="vertical-align: middle;"><?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['bi_school_name']); ?>&nbsp;</td>
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['bi_school_address']); ?>&nbsp;</td>
+									<td class="actions">
+																				
+										<a style="margin-top: 0;" class="btn btn-primary" href="asc201516s/edit_asc201516/<?= $asc201516['semis_universal201415s']['school_semis_new'];?>">
+											<span class="glyphicon glyphicon-edit"> </span> &nbsp;&nbsp;Edit
+										</a>
+								
+										<?= $this->Html->link(__('Finalize'), array('action' => 'finalize_dio', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?>
+
+									</td>
+								</tr>
+								<?php 
+							}
+						}
+					}
+				
+					
+				}
+				*/?>
+				
+
+				
+		    </tbody>
+		</table>
+
+    </div>   
+
+    <div role="tabpanel" class="tab-pane" id="finalized">
+    	<br><br>
+    	<table class="table table-bordered display" id="example3" cellpadding="0" cellspacing="0">
+			<thead>
+		        <tr>
+		            <th id="semisth">School SEMIS Code</th>            
+		            <th>Taluka</th>
+		            <th>School Name</th>
+		            <th>School Address</th>
+		            <th>Actions</th>            
+		        </tr>
+		    </thead>
+		    <tbody>    	
+				<?php 
+				foreach ($schools_filled_n_finalized as $key => $value) { ?>
+					<tr>	
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['school_semis_code']); ?>&nbsp;</td>				
+						<td style="vertical-align: middle;"><?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['bi_school_name']); ?>&nbsp;</td>
+						<td style="vertical-align: middle;"><?php echo h($value['Asc201516']['bi_school_address']); ?>&nbsp;</td>
+						<td class="actions">
+																	
+							<!--<a style="margin-top: 0;" class="btn btn-primary" href="asc201516s/view/< ?= $value['Asc201516']['school_semis_code'];?>">
+								<span class="glyphicon glyphicon-eye-open"> </span> &nbsp;&nbsp;View
+							</a>-->							
+
+						</td>
+					</tr><?php
+				}
+				/*foreach ($semis_universal201415s as $asc201516){
+					if(null != $forms_statuses){
+						foreach ($forms_statuses as $key => $value){
+							if($asc201516['semis_universal201415s']['school_semis_new'] == $value){ ?>
+								<tr>	
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['school_semis_new']); ?>&nbsp;</td>				
+									<td style="vertical-align: middle;"><?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['bi_school_name']); ?>&nbsp;</td>
+									<td style="vertical-align: middle;"><?php echo h($asc201516['semis_universal201415s']['bi_school_address']); ?>&nbsp;</td>
+									<td class="actions">
+																				
+										<a style="margin-top: 0;" class="btn btn-primary" href="asc201516s/edit_asc201516/<?= $asc201516['semis_universal201415s']['school_semis_new'];?>">
+											<span class="glyphicon glyphicon-edit"> </span> &nbsp;&nbsp;Edit
+										</a>
+								
+										<?= $this->Html->link(__('Finalize'), array('action' => 'finalize_dio', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?>
+
+									</td>
+								</tr>
+								<?php 
+							}
+						}
+					}
+				
+					
+				}
+				*/?>
+				
+
+				
+		    </tbody>
+		</table>
+
+    </div>   
+  </div>
+
+</div>
+
+
+
+<!--<table class="table table-bordered display" id="example" cellpadding="0" cellspacing="0">
+	<thead>
+        <tr>
+            <th>School SEMIS Code</th>            
+            <th>Taluka</th>
+            <th>School Name</th>
+            <th>School Address</th>
+            <th class="col-md-3">Actions</th>            
+        </tr>
+    </thead>
+    <tbody>    	
+		< ?php 
+		$i = 0;
+		foreach ($semis_universal201415s as $asc201516): ?>	
+		<tr>	
+			<td style="text-align: center; vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['school_semis_new']); ?>&nbsp;</td>				
+			<td style="vertical-align: middle;">< ?php echo h($tehsil_name['codes_for_district_and_tehsils']['tehsil']); ?>&nbsp;</td>		
+			<td style="vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['bi_school_name']); ?>&nbsp;</td>
+			<td style="vertical-align: middle;">< ?php echo h($asc201516['semis_universal201415s']['bi_school_address']); ?>&nbsp;</td>
+			<td class="actions">
+				
+				< ?php
+				if(null != $forms_statuses){
+					foreach ($forms_statuses as $key => $value) {
+						if($asc201516['semis_universal201415s']['school_semis_new'] == $value){
+							echo $this->Html->link(__('New Entry'), array('action' => 'add', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;', 'disabled', 'data-toggle' => 'tooltip', 'title' => 'Already Filled!'));		
+						}else{
+							echo $this->Html->link(__('New Entry'), array('action' => 'add', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));
+						}
+					}	
+				}else{
+					echo $this->Html->link(__('New Entry'), array('action' => 'add', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));
+				} 
+
+				 ?> 
+				<a style="margin-top: 0;" class="btn btn-primary" href="asc201516s/edit_asc201516/< ?= $asc201516['semis_universal201415s']['school_semis_new'];?>">
+					<span class="glyphicon glyphicon-edit"> </span> &nbsp;&nbsp;Edit
+				</a>
+								
+
+				< ?= $this->Html->link(__('Finalize'), array('action' => 'finalize_dio', $asc201516['semis_universal201415s']['school_semis_new']), array('class' => 'btn btn-primary', 'style' => 'margin-top: 0;'));?>
+				
+			</td>
+		< ?php endforeach; ?>	
+		</tr>
+    </tbody>
+</table>-->
+	<!--<p>
+	< ?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	));
+	?>	</p>
+
+	<div class="paging">
+	< ?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled btn'));
+		echo "\t";
+		echo $this->Paginator->numbers(array('separator' => '#')); 
+		echo "\t";
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled btn'));
+	?>
+	</div>
+</div>
+<div class="actions">
+	<h3>< ?php echo __('Actions'); ?></h3>
+	<ul>
+		<li>
+			< ?php echo $this->Html->link(__('New School'), array('action' => 'add')); ?> 
+		</li>
+	</ul>
+</div> -->
+

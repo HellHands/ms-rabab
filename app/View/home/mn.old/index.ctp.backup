@@ -1,0 +1,91 @@
+<div class="row">
+	<center><h1>Monitoring Proforma <br><small>Reform Support Unit</small></h1>		</center>
+	<div class="col-md-6" style="float: none; margin: 0 auto;">		
+	<hr>
+		<?= $this->Form->create(null, array('url' => array('controller' => 'forms', 'action' => 'add'))); ?>		
+		  <div class="form-group">
+		    <?= $this->Form->input('semis_code', array('label' => 'SEMIS Code', 'placeholder' => 'School SEMIS Code', 'class' => 'form-control')); ?>
+		  </div>
+		  <div class="form-group">
+		    <?= $this->Form->input('date_of_visit', array('placeholder' => 'Date of Visit', 'class' => 'form-control')); ?>
+		  </div>
+		  <div class="form-group">
+		  	<?= $this->Form->input('time_of_visit', array('placeholder' => 'Time of Visit', 'class' => 'form-control')); ?>
+		  </div>
+		  <div class="form-group">
+		  	<?= $this->Form->input('cord_lat', array('label' => 'Latitude (N)', 'placeholder' => 'Latitude', 'class' => 'form-control')); ?>
+		  </div>
+		  <div class="form-group">
+		  	<?= $this->Form->input('cord_long', array('label' => 'Longitude (E)', 'placeholder' => 'Longitude', 'class' => 'form-control')); ?>
+		  </div>
+		  
+		  <div class="form-group">
+		  	<?= $this->Form->input('districtid', array('label' => 'District ID', 'placeholder' => 'District ID', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('tehsilid', array('label' => 'Taluka/Town', 'placeholder' => 'Taluka/Town', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('ucid', array('label' => 'Union Council', 'placeholder' => 'Union Council', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_prefix', array('label' => 'School Prefix', 'placeholder' => 'Taluka/Town', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_name', array('label' => 'School Name', 'placeholder' => 'School Name', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_address', array('label' => 'School Address', 'placeholder' => 'School Address', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('villagemohalla', array('label' => 'Village/Mohalla', 'placeholder' => 'Village/Mohalla', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('tappa', array('label' => 'Tappa', 'placeholder' => 'Tappa', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('deh', array('label' => 'Deh', 'placeholder' => 'Deh', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_address', array('label' => 'School Address', 'placeholder' => 'School Address', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_address', array('label' => 'School Address', 'placeholder' => 'School Address', 'class' => 'form-control')); ?>
+		  </div>
+
+		  <div class="form-group">
+		  	<?= $this->Form->input('school_address', array('label' => 'School Address', 'placeholder' => 'School Address', 'class' => 'form-control')); ?>
+		  </div>
+
+
+		  <!--<div class="form-group">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> Check me out
+		    </label>
+		  </div>-->
+		  <button type="submit" class="btn btn-default">Submit</button>
+		<?= $this->Form->end(); ?>	
+
+		<!--<img src="<?php //echo $this->webroot; ?>img/bottom.JPG" style="margin-top: -20px; max-width:100%;" >
+		<h8>Copyright (C) 2014   SEMIS RSU SINDH  . All Rights Reserved.</h8> !-->		
+	</div>	
+</div>
+
+<br><br>
+
+
