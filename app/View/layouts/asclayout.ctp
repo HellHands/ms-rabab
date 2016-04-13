@@ -20,6 +20,8 @@
     <?= $this->Html->css('/css/jquery-ui.css'); ?>
     <!--< ?= $this->Html->css('/css/jquery.timepicker'); ?>	-->
     <?= $this->Html->css('/css/bootstrap-datepicker.min.css'); ?>	
+    <?php echo $this->Html->css('cake.generic');
+		echo $this->Html->css('cake.generic2'); ?>
     <!--< ?= $this->Html->script('/js/script_tables.js'); ?> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -140,7 +142,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      	</button>
-	      	<a class="navbar-brand" href=<?= $this->webroot.'home/index';?>>RSU</a>
+	      	<a class="navbar-brand" href=<?= $this->webroot.'home/index';?>>MS.RABAB</a>
       	</div>
       	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      	<ul class="nav navbar-nav">
@@ -160,18 +162,13 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12" id="minheightcont">		
-			<?= $this->Html->image('header.jpg', array(
-				'class' => "img-thumbnail",
-				'alt'   => "RSU, SEMIS",
-				'width' => "100%"				
-				)
-			); ?>
+		<div class="col-md-12" id="minheightcont">					
 			<?= $content_for_layout; ?>			
 		</div>
 	</div>
 	
 </div>
+<?php echo $this->element('sql_dump'); ?>
 
 <br><br>
 
